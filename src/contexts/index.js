@@ -5,7 +5,7 @@ export const GlobalContext = createContext()
 function GlobalState ({ children }) {
   const [State, setState] = useState('')
   const [Lga, setLga] = useState('')
-
+  const [FullName,setFullName]= useState(null)
   
 
   return (
@@ -15,7 +15,8 @@ function GlobalState ({ children }) {
         setState,
         Lga,
         setLga,
-        
+        FullName,
+        setFullName
       }}
     >
       {children}

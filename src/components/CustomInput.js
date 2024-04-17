@@ -29,7 +29,13 @@ const CustomInput = props => {
 
           props.TextWidth ? { width: props.TextWidth } : null,
 
-          props.TextHeight ? { height: props.TextHeight } : { height: 30 }
+          props.TextHeight ? { height: props.TextHeight } : { height: 30 },
+
+          {paddingLeft:10},
+
+          props.TextColor? {color:props.TextColor}:{color:"white"},
+
+          props.FontWieght ? {fontWeight:props.FontWieght}: {fontWeight:400}
         ]}
       />
     </View>

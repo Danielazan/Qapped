@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Register from './src/Screens/Register';
 import GlobalState from "./src/contexts/index"
-
+import Pay from "./src/Screens/Pay"
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
           options={{title: 'Welcome'}}
         /> */}
         <Stack.Screen name="Home" component={Register} />
+        <Stack.Screen name="Pay" component={Pay} />
       </Stack.Navigator>
     </NavigationContainer>
    </GlobalState>

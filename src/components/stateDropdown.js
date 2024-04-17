@@ -3,43 +3,44 @@ import React, { useState,useContext } from 'react';
   import { Dropdown } from 'react-native-element-dropdown';
   import AntDesign from '@expo/vector-icons/AntDesign';
   import Logo from "../../assets/images/Logo.png"
-  import Abia from "../../assets/Qapps/ABIA 3.png"
-  import Adamawa from "../../assets/Qapps/ABIA.png"
-  import AKWAIBOM from "../../assets/Qapps/AKWA IBOM.png"
-  import Anambra from "../../assets/Qapps/ANAMBRA.png"
-  import Bauchi from "../../assets/Qapps/BAUCHI 3.png"
-  import Bayelsa from "../../assets/Qapps/BAYELSA.png"
-  import Benue from "../../assets/Qapps/BENUE 4.png"
-  import Borno from "../../assets/Qapps/BORNO 3.png"
-  import Crossriver from "../../assets/Qapps/CROSS RIVER.png"
-  import delta from "../../assets/Qapps/DELTA.png"
-  import Ebonyi from "../../assets/Qapps/EBONYI.png"
-  import Edo from "../../assets/Qapps/EDO.png"
-  import Ekiti from "../../assets/Qapps/EKITI.png"
-  import Enugu from "../../assets/Qapps/ENUGU.png"
-  import Gombe from "../../assets/Qapps/GOMBE.png"
-  import Imo from "../../assets/Qapp/Jigawa.png"
-  import Jigawa from "../../assets/Qapps/JIGAWA.png"
-  import Kaduna from "../../assets/Qapps/KADUNA 3.png"
-  import Kano from "../../assets/Qapp/Kano 2.png"
-  import Katsina from "../../assets/Qapps/KASTINA 3.png"
-  import Kebbi from "../../assets/Qapps/KEBBI.png"
-  import Kogi from "../../assets/Qapps/KOGGI.png"
-  import Kwara from "../../assets/Qapps/KWARA.png"
-  import lagos from "../../assets/Qapps/LAGOS.png"
-  import Nasarawa from "../../assets/Qapp/Nassarawa.png"
-  import Niger from "../../assets/Qapp/Niger.png"
-  import Ogun from "../../assets/Qapps/OGUN.png"
-  import Ondo from "../../assets/Qapps/ONDO.png"
-  import Osun from "../../assets/Qapps/OSUN.png"
-  import Oyo from "../../assets/Qapp/oyo.png"
-  import Plateau from "../../assets/Qapp/Plateau.png"
-  import Rivers from "../../assets/Qapps/RIVERS.png"
-  import Sokoto from "../../assets/Qapp/Sokoto.png"
-  import Taraba from "../../assets/Qapp/Taraba.png"
-  import Yobe from "../../assets/Qapp/Yobe.png"
-  import Zamfara from "../../assets/Qapp/Zamfara.png"
-  // import Kano from "../../assets/Qapps/Kano.PNG"
+  import Abia from "../../assets/Qapps/abia.jpg"
+  import Adamawa from "../../assets/Qapps/adamawa.jpg"
+  import AKWAIBOM from "../../assets/Qapps/Akwaibom.jpg"
+  import Anambra from "../../assets/Qapps/Anambra.jpg"
+  import Bauchi from "../../assets/Qapps/bauchi.jpg"
+  import Bayelsa from "../../assets/Qapps/Bayelsa.jpg"
+  import Benue from "../../assets/Qapps/benue.jpg"
+  import Borno from "../../assets/Qapps/borno.jpg"
+  import Crossriver from "../../assets/Qapps/cross river.jpg"
+  import delta from "../../assets/Qapps/Delta.jpg"
+  import Ebonyi from "../../assets/Qapps/Ebonyi.jpg"
+  import Edo from "../../assets/Qapps/Edo.jpg"
+  import Ekiti from "../../assets/Qapps/Ekiti.jpg"
+  import Enugu from "../../assets/Qapps/Enugu.jpg"
+  import Gombe from "../../assets/Qapps/Gombe.jpg"
+  import Imo from "../../assets/Qapps/Imo.jpg"
+  import Jigawa from "../../assets/Qapps/Jigawa.jpg"
+  import Kaduna from "../../assets/Qapps/Kaduna.jpg"
+  import Kano from "../../assets/Qapps/kano.jpg"
+
+  import Katsina from "../../assets/Qapps/kastina.jpg"
+  import Kebbi from "../../assets/Qapps/Kebbi.jpg"
+  import Kogi from "../../assets/Qapps/Kogi.jpg"
+  import Kwara from "../../assets/Qapps/Kwara.jpg"
+  import lagos from "../../assets/Qapps/Lagos.jpg"
+  import Nasarawa from "../../assets/Qapps/Nasarawa.jpg"
+  import Niger from "../../assets/Qapps/niger.jpg"
+  import Ogun from "../../assets/Qapps/Ogun.jpg"
+  import Ondo from "../../assets/Qapps/Ondo.jpg"
+  import Osun from "../../assets/Qapps/Osun.jpg"
+  import Oyo from "../../assets/Qapps/Oyo.jpg"
+  import Plateau from "../../assets/Qapps/Plateau.jpg"
+  import Rivers from "../../assets/Qapps/Rivers.jpg"
+  import Sokoto from "../../assets/Qapps/Sokoto.jpg"
+  import Taraba from "../../assets/Qapps/taraba.jpg"
+  import Yobe from "../../assets/Qapps/Yobe.jpg"
+  import Zamfara from "../../assets/Qapps/Zamfara.jpg"
+  import FCT from "../../assets/Qapps/FCT Abuja.jpg"
   import {GlobalContext} from "../contexts/index"
   
 
@@ -225,6 +226,11 @@ import React, { useState,useContext } from 'react';
     label: 'Zamfara State',
     value: 'Zamfara State',
   image: Zamfara
+  },
+  {
+    label: 'FCT Abuja',
+    value: 'FCT Abuja',
+  image: FCT
   }
 ];
 
@@ -248,7 +254,7 @@ import React, { useState,useContext } from 'react';
         maxHeight={300}
         labelField="label"
         valueField="value"
-        placeholder="Choose Your State"
+        placeholder="Choose Your State of Origin"
         searchPlaceholder="Search..."
         // renderRightItem={image}
         value={value}
@@ -257,7 +263,7 @@ import React, { useState,useContext } from 'react';
           setState(item.value)
         }}
         renderLeftIcon={() => (
-          <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
+          <AntDesign style={styles.icon} color="white" name="Safety" size={20} />
         )}
 
         renderItem={(item, index) => (
@@ -285,6 +291,7 @@ import React, { useState,useContext } from 'react';
     },
     placeholderStyle: {
       fontSize: 16,
+      color:"white"
     },
     selectedTextStyle: {
       fontSize: 16,
@@ -292,6 +299,7 @@ import React, { useState,useContext } from 'react';
     iconStyle: {
       width: 20,
       height: 20,
+      color:"white"
     },
     inputSearchStyle: {
       height: 40,
@@ -306,8 +314,8 @@ import React, { useState,useContext } from 'react';
         marginBottom:12,
       },
     image: {
-        width: 50,
-        height: 50,
+        width: 200,
+        height: 200,
         marginRight: 5,
       },
   });
